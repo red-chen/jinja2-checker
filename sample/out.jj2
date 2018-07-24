@@ -1,2 +1,13 @@
 s1 = {{ info.k1 }}
 s2 = {{ info.k2 }}
+{% if info and info.k2 -%}
+s2 = {{info.k2}}
+{% else %}
+s2 = NO
+{% endif %}
+------------------
+{% if info and info.k3 -%}
+s3 = {{info.k3}}
+{% else %}
+s3 = NO
+{% endif %}
